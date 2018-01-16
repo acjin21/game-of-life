@@ -17,10 +17,6 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class TestGrid01 {
-	//private int xOffset; 
-    //private int yOffset;
-
-
     public static void main(String[] args) {
         new TestGrid01();
     }
@@ -67,20 +63,13 @@ public class TestGrid01 {
                     int cellHeight = height / rowCount;
 
                     selectedCell = null;
-                    //if (e.getX() >= xOffset && e.getY() >= yOffset) {
+                    int column = (e.getX()) / cellWidth;
+                    int row = (e.getY()) / cellHeight;
 
-                        int column = (e.getX()  ) / cellWidth;
-                        int row = (e.getY()) / cellHeight;
-
-                        if (column >= 0 && row >= 0 && column < columnCount && row < rowCount) {
-
-                            selectedCell = new Point(column, row);
-
-                        }
-
-                    //}
+                    if (column >= 0 && row >= 0 && column < columnCount && row < rowCount) {
+                        selectedCell = new Point(column, row);
+                    }
                     repaint();
-
                 }
             };
             addMouseMotionListener(mouseHandler);
@@ -109,9 +98,6 @@ public class TestGrid01 {
             int cellWidth = width / columnCount;
             int cellHeight = height / rowCount;
 
-            //int xOffset = (width - (columnCount * cellWidth)) / 2;
-            //int yOffset = (height - (rowCount * cellHeight)) / 2;
-
             if (cells.isEmpty()) {
                 for (int row = 0; row < rowCount; row++) {
                     for (int col = 0; col < columnCount; col++) {
@@ -126,12 +112,10 @@ public class TestGrid01 {
             }
 
             if (selectedCell != null) {
-
                 int index = selectedCell.x + (selectedCell.y * columnCount);
                 Rectangle cell = cells.get(index);
                 g2d.setColor(Color.BLUE);
                 g2d.fill(cell);
-
             }
 
             g2d.setColor(Color.GRAY);
