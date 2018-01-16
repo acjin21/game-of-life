@@ -19,7 +19,11 @@ import javax.swing.event.ChangeListener;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.Timer;
-
+/**
+ * javadoc *testing*
+ * @author AJin
+ *
+ */
 /*
  * Displays generations of John Conway's Game of Life.
  * Allows a user of the program to step through one generation
