@@ -206,39 +206,39 @@ public class GameOfLifeDisplay extends JFrame {
 //			public void actionPerformed(ActionEvent arg){
 //				g.clearBoard();
 //				repaint();
-				contentPane.addMouseListener(new MouseListener(){
-					public void mouseClicked(MouseEvent e){
-//						double boxWidth = (double)boardPanel.getWidth()/g.getCols();
-//						double boxHeight = (double)boardPanel.getHeight()/g.getRows();
-						int cellColIndex = (int)(e.getX()/(boardPanel.getWidth()/g.getCols()));
-						int cellRowIndex = (int)(e.getY()/(boardPanel.getHeight()/g.getRows())) ; //Figure this out
-						//int cellColIndex = e.getX()*g.getCols()/boardPanel.getWidth();
-						//int cellRowIndex = e.getY()*g.getRows()/boardPanel.getHeight();
-						if(g.isAlive(cellRowIndex,cellColIndex)){
-							g.setCell(cellRowIndex,cellColIndex, 0);
-						}
-						else{
-							g.setCell(cellRowIndex, cellColIndex, 1);
-						}
-						repaint();
-					}
-
-					@Override
-					public void mousePressed(MouseEvent e) {
-					}
-					@Override
-					public void mouseReleased(MouseEvent e) {
-					}
-					@Override
-					public void mouseEntered(MouseEvent e) {						
-					}
-					@Override
-					public void mouseExited(MouseEvent e) {
-					}
-				});
-				
-			//}
-		//});
+//                contentPane.addMouseListener(new MouseListener(){
+//                    public void mouseClicked(MouseEvent e){
+//                        double boxWidth = (double)boardPanel.getWidth()/g.getCols();
+//                        double boxHeight = (double)boardPanel.getHeight()/g.getRows();
+//                        int cellColIndex = (int)(e.getX()/(boardPanel.getWidth()/g.getCols()));
+//                        int cellRowIndex = (int)(e.getY()/(boardPanel.getHeight()/g.getRows())) ; //Figure this out
+//                        int cellColIndex = e.getX()*g.getCols()/boardPanel.getWidth();
+//                        int cellRowIndex = e.getY()*g.getRows()/boardPanel.getHeight();
+//                        if(g.isAlive(cellRowIndex,cellColIndex)){
+//                            g.setCell(cellRowIndex,cellColIndex, 0);
+//                        }
+//                        else{
+//                            g.setCell(cellRowIndex, cellColIndex, 1);
+//                        }
+//                        repaint();
+//                    }
+//
+//                    @Override
+//                    public void mousePressed(MouseEvent e) {
+//                    }
+//                    @Override
+//                    public void mouseReleased(MouseEvent e) {
+//                    }
+//                    @Override
+//                    public void mouseEntered(MouseEvent e) {
+//                    }
+//                    @Override
+//                    public void mouseExited(MouseEvent e) {
+//                    }
+//                });
+//
+//            }
+//        });
 		
 		/*
 		 * displays the generation number
