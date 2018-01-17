@@ -11,10 +11,8 @@ GameOfLifeDisplay$7.class
 GameOfLifeDisplay.class
 TestGameBoard.class
 TestGameOfLife.class
-TestGrid01$1.class
-TestGrid01$TestPane$1.class
-TestGrid01$TestPane.class
-TestGrid01.class
+
 .project
 .classpath
 .settings/
+.DS_Store
